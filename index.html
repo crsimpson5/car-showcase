@@ -4,8 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car Showcase</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Cars</h1>
+    <h1>Car Showcase</h1>
+    <div class="img-wrapper">
+      <h2>View Inventory</h2>
+        <ul class="category-list">
+          <li>
+            <button
+              class="category-btn"
+              data-src="assets/images/gray-porsche.jpg"
+            >
+              Sport
+            </button>
+          </li>
+          <li>
+            <button
+              class="category-btn"
+              data-src="assets/images/red-convertible.jpg"
+            >
+              Convertible
+            </button>
+          </li>
+          <li>
+            <button
+              class="category-btn"
+              data-src="assets/images/orange-mclaren.jpg"
+            >
+              Super
+            </button>
+          </li>
+        </ul>
+      <div><button class="search-btn">Search</button></div>
+    </div>
   </body>
 </html>
