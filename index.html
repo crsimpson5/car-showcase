@@ -10,40 +10,42 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Car Showcase</h1>
     <div class="img-wrapper">
       <h2>View Inventory</h2>
-        <ul class="category-list">
-          <li>
-            <button
-              class="category-btn"
-              data-src="assets/images/gray-porsche.jpg"
-            >
-              Sport
-            </button>
-          </li>
-          <li>
-            <button
-              class="category-btn"
-              data-src="assets/images/red-convertible.jpg"
-            >
-              Convertible
-            </button>
-          </li>
-          <li>
-            <button
-              class="category-btn"
-              data-src="assets/images/orange-mclaren.jpg"
-            >
-              Super
-            </button>
-          </li>
-        </ul>
+      <div class="overlay"></div>
+      <ul class="category-list">
+        <li>
+          <button
+            class="category-btn"
+            data-src="assets/images/gray-porsche.jpg"
+          >
+            Sport
+          </button>
+        </li>
+        <li>
+          <button
+            class="category-btn"
+            data-src="assets/images/red-convertible.jpg"
+          >
+            Convertible
+          </button>
+        </li>
+        <li>
+          <button
+            class="category-btn"
+            data-src="assets/images/orange-mclaren.jpg"
+          >
+            Super
+          </button>
+        </li>
+      </ul>
       <div><button class="search-btn">Search</button></div>
     </div>
+    <div class="inventory-grid"></div>
   </body>
 </html>

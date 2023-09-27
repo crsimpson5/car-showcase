@@ -13,19 +13,6 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-/* Preload background images */
-/* https://stackoverflow.com/a/53431982 */
-
-body::after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  z-index: -1;
-  content: url("assets/images/red-convertible.jpg")
-    url("assets/images/orange-mclaren.jpg");
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -51,10 +38,14 @@ h1 {
   max-height: 80dvh;
   aspect-ratio: 3 / 2;
   padding: 2rem 4rem;
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("assets/images/gray-porsche.jpg");
+  /* Preload all background images */
+  background-image: url("assets/images/gray-porsche.jpg"),
+    url("assets/images/red-convertible.jpg"),
+    url("assets/images/orange-mclaren.jpg");
   color: white;
   isolation: isolate;
 }
@@ -64,11 +55,7 @@ h1 {
   z-index: -1;
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(
-    200deg,
-    transparent 0 50%,
-    black
-  );
+  background-image: linear-gradient(200deg, transparent 0 50%, black);
 }
 
 .img-wrapper h2 {
@@ -80,6 +67,14 @@ h1 {
   text-underline-offset: 0.5em;
   text-decoration-thickness: 0.125rem;
   text-decoration-color: var(--blue);
+}
+
+.img-wrapper .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: black;
+  opacity: 0;
 }
 
 .category-list {
@@ -112,4 +107,11 @@ h1 {
   padding: 1em 2em;
   color: white;
   letter-spacing: 0.0625rem;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem 1rem;
+  padding: 4rem 2rem;
 }
